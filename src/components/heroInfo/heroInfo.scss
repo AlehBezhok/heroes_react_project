@@ -1,0 +1,88 @@
+/* heroInfo.scss */
+
+/* Общие стили для контейнера страницы с героем */
+.hero-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #ecf0f1; /* Светлый фон для страницы */
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* Стили для кнопки "Назад" */
+.back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* Общие стили для контейнера героя */
+.single-hero {
+    background: linear-gradient(135deg, #f7f8f9, #e1e2e7);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: left; /* Выравнивание текста по левому краю */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Стили для информации о герое */
+.single-hero__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    width: 150px; /* Ширина для выравнивания */
+}
+
+.info-text {
+    font-size: 18px;
+    color: #444;
+    flex: 1; /* Заполняет оставшееся пространство */
+}
+
+/* Стили для заголовка при ошибке или загрузке */
+.text-center {
+    text-align: center;
+    color: #e74c3c; /* Красный цвет для ошибок */
+}
+
+.mt-5 {
+    margin-top: 2rem; /* Добавление отступа сверху */
+}
+
+/* Стили для спиннера */
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

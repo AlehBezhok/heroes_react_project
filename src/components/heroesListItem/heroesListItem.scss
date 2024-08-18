@@ -1,0 +1,39 @@
+.hero-item {
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    .hero-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-img {
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        color: #f1f1f1;
+    }
+}

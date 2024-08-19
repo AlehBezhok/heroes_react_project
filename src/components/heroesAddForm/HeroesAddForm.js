@@ -18,17 +18,19 @@ const HeroesAddForm = () => {
 
     const renderFilters = (filters, status) => {
         if (status === "loading") {
-            return <option>Загрузка элементов</option>;
+            return <option>Loading</option>;
         } else if (status === "error") {
-            return <option classcName="text-center mt-5">Ошибка загрузки</option>
+            return <option classcName="text-center mt-5">Eror</option>
         }
 
-        if(filters && filters.length > 0) {
-            return filters.map(({name, label}) => {
-                if (name === 'all') return;
-
-                return <option key={name} value={name}>{label}</option>
-            })
+        if (filters && filters.length > 0) {
+            return filters
+                .filter(({ name }) => name !== 'all') // Фильтруем элементы
+                .map(({ name, label }) => (
+                    <option key={name} value={name}>
+                        {label}
+                    </option>
+                ));
         }
     }
     
